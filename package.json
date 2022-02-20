@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/LilyWS/shapeStore#readme",
   "dependencies": {
-    "create-react-app": "^5.0.0"
+    "create-react-app": "^5.0.0",
+    "mongodb": "^4.4.0"
   }
 }

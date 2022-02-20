@@ -2,7 +2,14 @@ const { Schema, model } = require('mongoose');
 
 const shapeSchema = new Schema({
     name: {
-        type: String
+        type: String,
+        required: true
+    },
+    price: {
+        type: Number
+    },
+    dimensions: {
+        type: Number
     },
     points: {
         type: Number
