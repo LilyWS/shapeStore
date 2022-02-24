@@ -8,21 +8,21 @@ const userSchema = new Schema({
     unique: true,
     trim: true,
   },
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-    match: [/.+@.+\..+/, 'Must match an email address!'],
-  },
+  // email: {
+  //   type: String,
+  //   required: true,
+  //   unique: true,
+  //   match: [/.+@.+\..+/, 'Must match an email address!'],
+  // },
   password: {
     type: String,
     required: true,
     minlength: 5,
+  },
+  cart: { 
+    type: Schema.Types.ObjectId,
+    ref: 'Cart'
   }
-//   cart: { not quite sure how to implement cart yet
-//     type: Schema.Types.ObjectId,
-//     ref: 'Village'
-//   }
 });
 
 userSchema.pre('save', async function (next) {
