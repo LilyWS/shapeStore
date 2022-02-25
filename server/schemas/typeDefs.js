@@ -25,12 +25,22 @@ const typeDefs = gql`
         quantity: Int
     }
 
+    type Auth {
+        token: ID!
+        user: User
+    }
+
     type Query {
         users: [User]
         user(id: ID!): User
         shapes: [Shape]
         shape(id: ID!): Shape
         cart(id: ID!): Cart
+    }
+
+    type Mutation {
+        login(username:String!, password:String!): Auth
+        addUser(username:String!, password:String!): Auth
     }
 `;
 

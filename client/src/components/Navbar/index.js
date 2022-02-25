@@ -7,7 +7,7 @@ function Navbar() {
             <Link to="/shop">
                 Shop
             </Link>
-            <Link to="/profile">
+            <Link to="/signup">
                 Account
             </Link>
             <Link to="/cart">
